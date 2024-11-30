@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSS for Gadgets</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="https://www.pngitem.com/pimgs/m/158-1584997_artificial-intelligence-artificial-intelligence-ai-icons-hd-png.png" type="png">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <h1>AI Gadget Recommendation Assistant</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="profile-icons">
+            <i class="fa fa-bell"></i>
+            <i class="fa fa-user-circle"></i>
+        </div>
+    </div>
+
+    <!-- Chatbot Section Below Navbar -->
+    <div class="main-content">
+        <div class="sidebar">
+            <a href="#" class="active"><i class="fa fa-home"></i> Home</a>
+            <a href="#"><i class="fa fa-film"></i> Gedgets</a>
+            <a href="#"><i class="fa fa-fire"></i> Trending</a>
+            <a href="#" id="categoryBtn"><i class="fa fa-th-list"></i> Category</a>
+            <button class="sign-in">Sign In</button>
+            <button class="power" id="poweredBY">
+                <h5>Powered by: Tech Fusion Innovators</h5>
+                <div class="tootlip">
+                    <div class="team-position">
+                        Leader:
+                        Member:
+                        Member:
+                    </div>
+                    <div class="team-members">
+                        Christina Loudel Intia
+                        Rol Axcel Llanto
+                        Sheila Mae Gallo
+                    </div>
+                </div>
+            </button>
+        </div>
+
+        <div class="modal" id="categoryModal">
+            <div class="modal-content">
+              <span class="close-btn" id="closeModal">&times;</span>
+              <h2>Gadgets</h2>
+              <ul>
+                <div id="app" class="container">
+                    <card data-image="https://cdn.mos.cms.futurecdn.net/Q7c6mN9cCCny6Z9jSpuEoW.jpg" onclick="showModal('laptopModal')">
+                      <h1 slot="header">Laptops</h1>
+                      <p slot="content">Versatility and Productivity Laptops excel in tasks that require robust processing power and multitasking capabilities.</p>
+                    </card>
+                    <card data-image="https://cdn.nguyenkimmall.com/images/detailed/862/10055112-dien-thoai-samsung-galaxy-a54-5g-8gb-128gb-den-1.jpg">
+                      <h1 slot="header">Smartphones</h1>
+                      <p slot="content">Portability and Communication Smartphones specialize in being compact, all-in-one devices for communication, entertainment.</p>
+                    </card>
+                    <card data-image="https://i5.walmartimages.com/asr/5cc5cb38-e618-498c-8c6a-2c711e3bc9be.f4efef7cb3aedeaa102bfc0bb5ac2023.jpeg">
+                      <h1 slot="header">Tablets</h1>
+                      <p slot="content">Lightweight Convenience and Media Consumption Tablets strike a balance between portability and screen size, making them perfect for gaming.</p>
+                    </card>
+                </div>
+              </ul>
+            </div>
+          </div>
+
+        <div class="chat-container">
+            <div id="chatbox">
+                <p class="bot">Hello! I’m your product assistant. Please enter your budget(₱) to get started.</p>
+            </div>
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Type your response..." autofocus>
+                <button id="sendBtn">Send</button>
+                <button id="resetBtn" onclick="resetChat()">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <div class="tootlip">
+                        Reset conversations
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="gadgetDisplay" class="gadget-display">
+            <div class="display-notice">
+                <h3>Selected Gadget:</h3>
+                <p>No Gadget selected</p>
+            </div>
+        <div class="gadget-details">
+            <h2 class="gadget-name">Null</h2>
+            <div class="gadget-specs">
+                <div class="spec-item">
+                    <strong>Brand:</strong> null
+                </div>
+                <div class="spec-item">
+                    <strong>Specs:</strong> null
+                </div>
+                <div class="spec-item">
+                    <strong>Storage:</strong> null
+                </div>
+                <div class="spec-item">
+                    <strong>Price:</strong> null
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="ai-script.js"></script>
+    <script src="modal.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script>
+    <script  src="cards.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
