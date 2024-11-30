@@ -9,6 +9,10 @@ body {
     padding: 0 15px;
 }
 
+.logo h2 {
+  display: none;
+}
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -73,7 +77,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-right: 20px;
-    margin-left: -50px;
+    margin-left: -18px;
 }
 
 .sidebar a {
@@ -124,7 +128,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-right: -50px;
+    margin-right: -20px;
 
 }
 
@@ -614,20 +618,6 @@ button:hover {
   font-style: italic;
   font-weight: normal;
 }
-
-
-
-  @media(min-width: 540px){
-    .card-grid{
-      grid-template-columns: repeat(2, 1fr); 
-    }
-    .sidebar {
-      margin-left: -10px;
-    }
-    .chat-container {
-      margin-right: -10px;
-    }
-  }
   
   @media(min-width: 960px){
     .card-grid{
@@ -643,6 +633,27 @@ button:hover {
 
     #gadgetDisplay {
       height: 230px;
+    }
+  }
+
+  @media(max-width: 773px) {
+    .sidebar {
+      display: none;
+    }
+
+    .logo h1 {
+      display: none;
+    }
+
+    .logo h2 {
+      display: block;
+    }
+
+    .sidebar {
+      margin-left: 20px;
+    }
+    .chat-container {
+      transform: translate(-10px, 0);
     }
   }
   
