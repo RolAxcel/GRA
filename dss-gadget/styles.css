@@ -627,8 +627,12 @@ button:hover {
 
   @media(min-width: 1465px) {
     .main-content {
-      height: 360px;
+      height: 600px;
       max-width: 1797;
+    }
+
+    #chatbox {
+      height: 480px;
     }
 
     #gadgetDisplay {
@@ -657,5 +661,9 @@ button:hover {
     }
   }
   
-  
+  @media (max-width: 1872px) {
+    .main-content {
+      height: 500px;
+    }
+  }
               
